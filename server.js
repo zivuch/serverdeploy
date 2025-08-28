@@ -16,5 +16,6 @@ app.get("/test", (req, res) => {
 });
 
 app.get("/", (req, res) => {
+    console.error("Get Request on line 18=>", process.env.NAME);
   res.send(`<h1>Welcome ${process.env.NAME}</h1>`);
 });
