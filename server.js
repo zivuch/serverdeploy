@@ -5,6 +5,8 @@ require("dotenv").config();
 
 const app = express();
 
+app.use(cors());
+
 const PORT = process.env.PORT || 3001;
 
 app.listen(PORT, () => console.log(`run on ${PORT}`));
@@ -16,6 +18,6 @@ app.get("/test", (req, res) => {
 });
 
 app.get("/", (req, res) => {
-    console.error("Get Request on line 18=>", process.env.NAME);
+  console.error("Get Request on line 18=>", process.env.NAME);
   res.send(`<h1>Welcome ${process.env.NAME}</h1>`);
 });
