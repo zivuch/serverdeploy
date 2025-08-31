@@ -15,7 +15,7 @@ app.listen(PORT, () => console.log(`run on ${PORT}`));
 console.error("Name=>", process.env.NAME);
 
 app.get("/api/test", (req, res) => {
-  res.json({ msg: `hello from server, my name is ${process.env.NAME}` });
+  res.json({ msg: `hello from server,  my name is ${process.env.NAME}` });
 });
 
 app.get("/api", (req, res) => {
