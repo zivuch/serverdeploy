@@ -25,6 +25,6 @@ app.get("/api", (req, res) => {
 
 app.use(express.static(path.join(__dirname, "/client/dist")));
 
-app.get("*", (rea, res) => {
+app.get("/*any", (rea, res) => {
   res.sendFile(path.resolve(__dirname, "./client/dist", "index.html"));
 });
