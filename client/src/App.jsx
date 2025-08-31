@@ -10,7 +10,7 @@ function App() {
   // useEffect(() => fetchData(), []);
 
   const fetchData = () => {
-    fetch("https://serverdeploy-ymxy.onrender.com/test")
+    fetch("/api/test")
       .then((res) => res.json())
       .then((data) => {
         // console.log(data);
